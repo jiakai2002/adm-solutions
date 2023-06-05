@@ -1,7 +1,15 @@
-keypad = {2: "ABC", 3: "DEF", 4: "GHI", 5: "JKL",
-          6: "MNO", 7: "PQRS", 8: "TUV", 9: "WXYZ"}
+keypad = {
+    2: "ABC",
+    3: "DEF",
+    4: "GHI",
+    5: "JKL",
+    6: "MNO",
+    7: "PQRS",
+    8: "TUV",
+    9: "WXYZ",
+}
 
-n = ['ADH', 'ADI']
+n = ["ADH", "ADI"]
 combinations = []
 
 
@@ -13,7 +21,7 @@ def get_terms(digits):
 
 
 def combine(terms, accum):
-    last = (len(terms) == 1)
+    last = len(terms) == 1
     n = len(terms[0])
     for i in range(n):
         item = accum + terms[0][i]
@@ -32,7 +40,7 @@ def get_words(combinations, n):
 
 
 def answer(digits):
-    combine(get_terms(digits), '')
+    combine(get_terms(digits), "")
     print(combinations)
     print(get_words(combinations, n))
 

@@ -1,5 +1,4 @@
 def is_anagram(str1, str2):
-
     if len(str1) != len(str2):
         return False
 
@@ -15,4 +14,4 @@ def is_anagram(str1, str2):
     return str1_dict == str2_dict
 
 
-print(is_anagram('cbaa', 'aabc'))
+print(is_anagram("cbaa", "aabc"))

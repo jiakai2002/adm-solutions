@@ -1,0 +1,19 @@
+(a)
+heapsort the checks using key = number -- O(nlogn)
+create a balanced binary search tree for numbers in checks: -- O(nlogn)
+-insert middle number as root
+-recursively do the same for both parts that are left
+search the checks tree for each number in the bills -- O(nlogn)
+if not found, add the number to an unpaid list
+T(n) = O(nlogn)
+
+(b)
+sort the printed list by publisher using heapsort -- O(nlogn)
+iterate through the list and create a dictionary storing publisher:book count pair -- O(n)
+for each of the 30 publishers, search the dictionary for book count -- O(n)
+T(n) = O(nlogn)
+
+(c)
+sort the checkout cards by name using heapsort O(nlogn)
+iterate through the cards and add each unique name into a separate list -- O(n)
+T(n) = O(nlogn)

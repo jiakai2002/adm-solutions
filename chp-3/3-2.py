@@ -34,7 +34,7 @@ def count_parentheses(pstr):
     pstack = Stack(20)
     count = 0
     for p in pstr:
-        if p == '(':
+        if p == "(":
             pstack.push(p)
         else:
             if not pstack.isEmpty():
@@ -42,4 +42,5 @@ def count_parentheses(pstr):
                 count += 2
     return count
 
-print(count_parentheses(')()(())()()))())))('))
+
+print(count_parentheses(")()(())()()))())))("))

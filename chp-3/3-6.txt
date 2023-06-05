@@ -1,0 +1,4 @@
+FIFO order because earlier items expire faster
+Queue (Implement using a python deque)
+Enqueue: add item to fridge
+Deqeue: remove item from fridge

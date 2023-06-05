@@ -9,7 +9,7 @@ class Stack:
             raise Exception("Stack is Full")
         else:
             if not self.min or value > self.min:
-                self.min = value            
+                self.min = value
             self.storage.append(value)
 
     def pop(self):
@@ -20,7 +20,7 @@ class Stack:
 
     def findmin(self):
         return self.min
-    
+
     def isEmpty(self):
         if len(self.storage) == 0:
             return True
@@ -30,11 +30,11 @@ class Stack:
         if len(self.storage) == self.k:
             return True
         return False
-    
+
+
 S = Stack(20)
 S.push(1)
 S.push(5)
 S.push(2)
 S.push(19)
 print(S.findmin())
-

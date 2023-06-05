@@ -1,9 +1,12 @@
 class Node:
     def __init__(self, data):
         self.data = data  # data being passed in
-        self.next = None     # reference to next node
+        self.next = None  # reference to next node
 
-# a linked list has 3 attributes: head points to first node, tail points to end node, size is number of nodes
+
+# a linked list has 3 attributes: head points to first node, tail points to
+# end node, size is number of nodes
+
 
 class Linkedlist:
     def __init__(self):
@@ -46,17 +49,17 @@ class Linkedlist:
     def print_list(self):
         data = ""
         current = self.head
-        while current != None:
+        while not current:
             data = data + str(current.data) + ""
             current = current.next
         print(data)
 
-    # remove the first node from linked list, garbage collected once no references
+    # remove the first node from linked list, garbage collected once no
+    # references
     def remove_first(self):
-
         # check if list is empty
         if self.size == 0:
-            raise("Error. Linked list is empty")
+            raise ("Error. Linked list is empty")
         # check if only one node in list, which means empty list after removal
         elif self.size == 1:
             self.head = None
@@ -68,10 +71,9 @@ class Linkedlist:
 
     # remove last node from list, garbage collected once no reference
     def remove_last(self):
-
         # check if list is empty
         if self.size == 0:
-            raise("Error. Linked list is empty")
+            raise ("Error. Linked list is empty")
 
         # check if only one node in list, which means empty list after removal
         elif self.size == 1:
@@ -81,7 +83,7 @@ class Linkedlist:
         else:
             # do .next down the linkedlist till second last node
             current = self.head
-            while current.next.next != None:
+            while not current.next.next:
                 current = current.next
 
             # set reference of second last node to None
@@ -93,7 +95,7 @@ class Linkedlist:
 
     def insert_at(self, pos, data):
         if pos < 0 or pos > self.size:
-            raise("Error: Invalid position.")
+            raise ("Error: Invalid position.")
         # insert at front of list
         elif pos == 0:
             self.prepend(data)
@@ -107,7 +109,8 @@ class Linkedlist:
             prev = None
             current = self.head
             counter = 0
-            # traverse pos = k times starting from self.head to reach node after new node
+            # traverse pos = k times starting from self.head to reach node
+            # after new node
             while counter < pos:
                 prev = current
                 current = current.next
@@ -118,7 +121,7 @@ class Linkedlist:
 
     def remove_at(self, pos):
         if pos < 0 or pos > self.size:
-            raise("Error: Invalid position.")
+            raise ("Error: Invalid position.")
 
         # remove at front of list
         elif pos == 0:
@@ -153,6 +156,7 @@ class Linkedlist:
             prev = current
             current = temp
 
+
 lst = Linkedlist()
 lst.append(1)
 lst.append(2)
@@ -160,9 +164,3 @@ lst.append(3)
 lst.print_list()
 lst.reverse_list()
 lst.print_list()
-
-            
-
-
-
-

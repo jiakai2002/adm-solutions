@@ -1,0 +1,5 @@
+(a) 
+for a size 4 array with 3 elements, remove 1 to trigger halving, insert 1 to trigger doubling
+
+(b) 
+half only when array is below 1/4 full

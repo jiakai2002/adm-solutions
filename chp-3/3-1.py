@@ -33,7 +33,7 @@ def check_parentheses(pstr):
     # initialize pstack to store index of possible offenders
     pstack = Stack(20)
     for i in range(0, len(pstr)):
-        if pstr[i] == '(':
+        if pstr[i] == "(":
             pstack.push(i)
         else:
             if not pstack.isEmpty():
@@ -48,4 +48,4 @@ def check_parentheses(pstr):
         return False, pstack.storage[0]
 
 
-print(check_parentheses('((((())'))
+print(check_parentheses("((((())"))
