@@ -1,9 +1,6 @@
 (a)
 heapsort the checks using key = number -- O(nlogn)
-create a balanced binary search tree for numbers in checks: -- O(nlogn)
--insert middle number as root
--recursively do the same for both parts that are left
-search the checks tree for each number in the bills -- O(nlogn)
+for each number in the bills, use binary search to search in checks -- O(nlogn)
 if not found, add the number to an unpaid list
 T(n) = O(nlogn)
 

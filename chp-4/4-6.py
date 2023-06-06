@@ -1,57 +1,30 @@
-class BSTNode:
-    def __init__(self, val):
-        self.left = None
-        self.right = None
-        self.val = val
-        self.parent = None
+import heapq
 
-    def insert(self, val):
-        if not self.val:
-            self.val = val
 
-        elif val == self.val:
-            return
+def binarySearch(array, x, low, high):
+    if high >= low:
+        mid = low + (high - low) // 2
 
-        elif val < self.val:
-            if self.left:
-                self.left.insert(val)
-            else:
-                self.left = BSTNode(val)
+        if array[mid] == x:
+            return mid
+
+        elif array[mid] > x:
+            return binarySearch(array, x, low, mid - 1)
 
         else:
-            if self.right:
-                self.right.insert(val)
-            else:
-                self.right = BSTNode(val)
+            return binarySearch(array, x, mid + 1, high)
 
-    def search(self, val):
-        if self.val == val:
-            return True
-
-        elif val > self.val:
-            if self.right:
-                return self.right.search(val)
-            else:
-                return False
-
-        elif val < self.val:
-            if self.left:
-                return self.left.search(val)
-            else:
-                return False
-
-
-def build_tree(elements):
-    root = BSTNode(elements[0])
-    for i in elements:
-        root.insert(i)
-    return root
+    else:
+        return False
 
 
 def find_sum_pair_1(s1, s2, x):
-    bst_s2 = build_tree(s2)
-    for i in s1:
-        if bst_s2.search(x - i):
+    sorted_s1 = []
+    heapq.heapify(s1)
+    while s1:
+        sorted_s1.append(heapq.heappop(s1))
+    for i in s2:
+        if binarySearch(sorted_s1, x - i, 0, len(sorted_s1) - 1):
             return True
 
 
@@ -60,3 +33,6 @@ def find_sum_pair_2(s1, s2, x):
         for j in s2:
             if x == i + j:
                 return True
+
+
+print(find_sum_pair_1([3, 12, 5, 7, 4, 1], [2, 4, 7, 1, 0, 12, 5], 8))
