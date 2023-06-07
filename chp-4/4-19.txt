@@ -1,0 +1,21 @@
+max-heap operations
+construction: O(nlogn)
+
+find max: O(1)
+insert: O(logn)
+
+sorted array operations
+
+find max: O(1)
+search: O(logn)
+insert: O(n)
+delete: O(n)
+
+(a) Does not matter. Both take O(1) time
+
+(b) Does not matter. Both take O(n) time
+
+(c) Does not matter. Both take O(n) time (faster heap construction using bubble_down)
+
+(d) Sorted array. Takes O(1) time compared to O(n) for max-heap.
+
