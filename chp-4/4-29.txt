@@ -1,0 +1,7 @@
+for merging two sorted lists i and j,
+no. of comparisons = 2*min(i,j) - 1
+cost = merge(n,n) + merge(2*n,n) + ... + merge((k-1)*n,n)
+     = (k-1) * merge(n,n)
+     = (k-1) * (2n - 1)
+     = 2nk - k - 2n + 1
+     = O(kn)

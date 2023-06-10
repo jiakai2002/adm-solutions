@@ -1,21 +1,20 @@
 max-heap operations
-construction: O(nlogn)
 
 find max: O(1)
 insert: O(logn)
 
 sorted array operations
 
-find max: O(1)
 search: O(logn)
 insert: O(n)
 delete: O(n)
 
 (a) Does not matter. Both take O(1) time
 
-(b) Does not matter. Both take O(n) time
+(b) If index is not known, both takes O(n). 
+    If index is known, max-heap takes O(logn) time to bubble_down 
+    while sorted array takes O(n).
 
-(c) Does not matter. Both take O(n) time (faster heap construction using bubble_down)
+(c) Heap takes O(n) time (using bubble_down). Sorted_array takes O(nlogn) for n inserts.
 
-(d) Sorted array. Takes O(1) time compared to O(n) for max-heap.
-
+(d) Sorted array takes O(1) time. Max-heap needs to visit each leaf node so O(n) time.

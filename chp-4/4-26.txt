@@ -1,0 +1,13 @@
+best case:
+succesively pick the median as pivot so each partition halves the array
+let k = no. of partitions
+1 = n/2^k
+k = lg2(n)
+minimum recursion depth: lg2(n)
+
+worst case:
+succesively pick the min/max as pivot so each partition decrements the array
+let k = no. of partitions
+1 = n-k
+k = n
+maximum recursion depth: n

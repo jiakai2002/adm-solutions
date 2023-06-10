@@ -1,0 +1,5 @@
+if same-key, pick element from left subarray first
+the next iteration will pick headq(buffer2), perserving the original order
+
+if headq(buffer1) == headq(buffer2):
+    s[i] = dequeue(buffer1)

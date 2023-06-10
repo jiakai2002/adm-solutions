@@ -1,0 +1,17 @@
+(a)
+no. of pivots = k
+no. of elements = n
+for worst case, 1 = n(1/2)^k, n = 2^k, k = log2n
+since k = h, h = log2(n)
+
+T(n) = O(n * h)
+T(n) = O(nlog2(n))
+
+(b)
+no. of pivots = k
+no. of elements = n
+for worst case, 1 = n(2/3)^k, n = (3/2)^k, k = log(3/2)n
+since k = h, h = log(3/2)n
+
+T(n) = O(n * h)
+T(n) = O(nlog(3/2)(n))

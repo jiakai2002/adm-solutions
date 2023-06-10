@@ -1,0 +1,8 @@
+cost of merging 1 length n pair = 2n - 1
+
+cost = merge k/2 length n pairs + merge k/4 length 2n pairs
+
+T(n) = k/2 * (2n-1) + k/4 * (4n-1)
+     = k * (2n - 3/4)
+     = 2nk - 3k/4
+     = O(kn)

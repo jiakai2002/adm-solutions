@@ -1,0 +1,7 @@
+worst case:
+sucessively pick min/max element as pivot, n partitions required
+for each partition, a pivot is compared to each remaining element
+after which pivot is considered sorted
+say zi is selected as pivot and compared to each remaining element including zj once
+after which zi is then considered
+thus maximum comparison between zi and zj is 1
