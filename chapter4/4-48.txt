@@ -1,0 +1,44 @@
+                    mergesort
+        +ve                             -ve
+O(nlogn) time                   O(n) space required
+stable                          not efficient for small lists
+good for external sorting
+O(1) space for linkedlists
+
+
+             heapsort
+    +ve                       -ve
+O(1) space                  unstable
+O(nlogn) time
+consistent performance
+
+                    quicksort
+        +ve                                         -ve
+O(nlogn) average time                       worst case: O(n^2) time and O(n) space 
+O(logn) average space                       unstable due to swapping
+fastest sort due to small constant factors
+
+            selection sort
+    +ve                             -ve
+easy to implement               O(n^2) time
+O(1) space                  
+not stable due to swapping
+
+
+            insertion sort
+        +ve                        -ve
+easy to implement              O(n^2) time
+efficient if nearly sorted
+O(1) space
+stable
+
+
+                    radix sort
+            +ve                             -ve
+stable                                  O(k) space
+O(d*(n+b)) linear time                  less flexible (depends on digits and letters)
+ d = no. of digits of maxim
+ (n+b) is for counting sort
+ b = base of number system used
+
+thus, use radix sort

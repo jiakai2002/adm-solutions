@@ -1,0 +1,15 @@
+mergesort 
+T(n) = O(nlogn) 
+S(n) = O(n) -> we use buffer arrays when merging (up till 2 size n/2 buffer arrays)
+
+quicksort 
+average T(n) = O(nlogn)
+average S(n) = O(logn) -> depth of recursion = logn
+
+heapsort
+T(n) = O(logn)
+S(n) = O(1) -> rearranged to heap in-place in-place sort
+
+radix sort
+average T(n) = O(kn) -> where k is number of digits in largest element
+S(n) = 0(kn)
