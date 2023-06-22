@@ -1,0 +1,7 @@
+(a)
+do a binary search for n, takes log(n) questions
+
+(b)
+if n is not known, start with a random number like 2^i
+if n is larger then ask 2^(i+1), finding range takes log(n) questions
+else do a binary search to find n in log(n) questions
