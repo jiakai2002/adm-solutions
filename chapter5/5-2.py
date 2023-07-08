@@ -12,7 +12,7 @@ def bs_missing(array, low, high):
         else:
             # missing integer in right side
             length = array[high]-array[mid]+1
-            if length > len(array[mid:high]):
+            if length > len(array[mid:high+1]):
                 return bs_missing(array, mid+1, high)
             # missing integer in left side
             else:
